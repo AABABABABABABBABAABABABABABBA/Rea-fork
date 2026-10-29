@@ -115,6 +115,13 @@ export const WEB_SCRIPT_EXPORT_PROVIDER = {
   version: "1",
 } as const;
 
+/** Provider identity for static, no-browser website domain crawls. */
+export const WEBSITE_CRAWL_PROVIDER = {
+  id: "rea-website-crawl",
+  name: "REA website domain crawler",
+  version: "1",
+} as const;
+
 /** Provider identity for deterministic static JavaScript application analysis. */
 export const JAVASCRIPT_APPLICATION_PROVIDER = {
   id: "rea-javascript-application",

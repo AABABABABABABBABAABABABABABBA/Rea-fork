@@ -690,6 +690,12 @@ export const TOOL_EFFECTS: Readonly<Record<string, ToolEffects>> = {
     writesFilesystem: true,
     idempotent: false,
   }),
+  crawl_website: effects({
+    mutatesSession: true,
+    writesFilesystem: true,
+    accessesNetwork: true,
+    idempotent: false,
+  }),
   export_environment_bundle: effects({
     writesFilesystem: true,
     idempotent: false,

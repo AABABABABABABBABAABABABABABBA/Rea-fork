@@ -42,6 +42,7 @@ export class ArtifactOperationError extends AnalysisError {
       | "inspect_keyed_archive"
       | "trace_dylib_resolution"
       | "export_web_scripts"
+      | "crawl_website"
       | "trace_web_module_imports"
       | "trace_web_source_location"
       | "analyze_javascript_application",

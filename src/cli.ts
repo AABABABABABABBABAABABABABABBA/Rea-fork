@@ -58,6 +58,7 @@ import { registerEnvironmentCommands } from "./cli/environmentCommands.js";
 import { registerProcessCommands } from "./cli/processCommands.js";
 import { registerBrowserCommands } from "./cli/browserCommands.js";
 import { registerWebScriptCommands } from "./cli/webScriptCommands.js";
+import { registerWebsiteCrawlCommands } from "./cli/websiteCrawlCommands.js";
 import { registerWebModuleCommands } from "./cli/webModuleCommands.js";
 import { registerWebSourceLocationCommands } from "./cli/webSourceLocationCommands.js";
 import { registerWebRuntimeCommands } from "./cli/webRuntimeCommands.js";
@@ -233,6 +234,7 @@ export const createCli = (
       registerProcessCommands(cli, logger, environment);
       registerJavaScriptRecoveryCommands(cli, logger, environment);
       registerWebScriptCommands(cli, logger);
+      registerWebsiteCrawlCommands(cli, logger, environment);
       registerWebModuleCommands(cli, logger, environment);
       registerWebSourceLocationCommands(cli, logger, environment);
       registerApplicationCommands(cli, logger);

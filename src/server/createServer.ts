@@ -122,6 +122,7 @@ import { registerNativeTools } from "./registerNativeTools.js";
 import { registerBrowserScenarioTool } from "./registerBrowserScenarioTool.js";
 import { registerBrowserTools } from "./registerBrowserTools.js";
 import { registerWebScriptTool } from "./registerWebScriptTool.js";
+import { registerWebsiteCrawlTool } from "./registerWebsiteCrawlTool.js";
 import { registerWebModuleTool } from "./registerWebModuleTool.js";
 import type { WebModuleTraceService } from "../application/WebModuleTraceService.js";
 import { createWebModuleTraceService } from "../composition/webModules.js";
@@ -1119,6 +1120,11 @@ export const createServer = (
         artifactResources,
       );
       registerWebScriptTool(server, { ...common, artifactResources });
+      registerWebsiteCrawlTool(server, {
+        ...common,
+        artifactResources,
+        environment,
+      });
       registerWebModuleTool(
         server,
         selectedOptions.webModuleTrace ??
